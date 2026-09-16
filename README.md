@@ -35,3 +35,25 @@ Non-blocking STM32 radar system with CAN bus telemetry, Processing GUI, and mult
 | **Mode C** | High-Speed GUI Telemetry (Processing) | [▶️ Watch Mode C](https://www.youtube.com/shorts/U9Nu-PsKgMc) |
 | **Mode D** | Manual Target Lock | [▶️ Watch Mode D](https://www.youtube.com/shorts/kw36qmz6KXs) |
 | **OLED Display** | Real-Time I²C Interface & Status | [▶️ Watch OLED Demo](https://youtube.com/shorts/f37CTqDQNpk) |
+
+## 📍 Hardware Topology & Signal Mapping
+
+To avoid hardware conflicts with the **ST-Link/V2 SWD debugger (Port A)**, UI peripherals and non-critical I/Os are assigned to **Port B**, reserving core high-speed peripherals (CAN CS, Servo PWM, Buzzer, UART) for Port A.
+
++-------------------------------------------------------------------------+
+|                         STM32F103C8T6 (Blue Pill)                       |
++-------------------+-------------------+-------------------+-------------+
+| I²C OLED (SSD1306)| Ultrasonic Sensor | Actuators & Audio | Keypad 4x4  |
+|  - SCL: PB6       |  - TRIG: PB0      |  - Servo PWM: PA0 |  - Rows:    |
+|  - SDA: PB7       |  - ECHO: PB1      |  - MOSFET Gate:PA1|    PB12-PB15|
+|                   |                   |  - Buzzer: PA3    |  - Columns: |
+|                   |                   |  - CAN CS: PA4    |    PB8,9,3,4|
++-------------------+-------------------+-------------------+-------------+
+                                   |
+                                   +---> [ CAN Bus Protocol (MCP2515 @ 500kbps) ]
+                                   |
+                                   v (USART1 @ 9600 / 115200 Baud)
+                     [ PC Laptop / Workstation ]
+                                   |
+                                   v (Real-Time Telemetry Data)
+                    [ Processing 4 Desktop Radar GUI ]

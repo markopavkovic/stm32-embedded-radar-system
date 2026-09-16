@@ -57,3 +57,5 @@ To avoid hardware conflicts with the **ST-Link/V2 SWD debugger (Port A)**, UI pe
                                    |
                                    v (Real-Time Telemetry Data)
                     [ Processing 4 Desktop Radar GUI ]
+
+---

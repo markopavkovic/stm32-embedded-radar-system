@@ -25,3 +25,13 @@ Non-blocking STM32 radar system with CAN bus telemetry, Processing GUI, and mult
 - `Media/` - Project photos, schematics, and demo footage.
 
 ---
+
+## 📹 Video Demonstrations
+
+| Operational Mode | Description | Video Link |
+| :--- | :--- | :--- |
+| **Mode A** | Autonomous Sweep ($0^\circ - 180^\circ$) | [▶️ Watch Mode A](https://youtube.com/shorts/fWLX5uD1mLQ) |
+| **Mode B** | Step-by-Step Keypad Control | [▶️ Watch Mode B](https://youtube.com/shorts/HrG4NBynLL0) |
+| **Mode C** | High-Speed GUI Telemetry (Processing) | [▶️ Watch Mode C](https://www.youtube.com/shorts/U9Nu-PsKgMc) |
+| **Mode D** | Manual Target Lock | [▶️ Watch Mode D](https://www.youtube.com/shorts/kw36qmz6KXs) |
+| **OLED Display** | Real-Time I²C Interface & Status | [▶️ Watch OLED Demo](https://youtube.com/shorts/f37CTqDQNpk) |

@@ -40,6 +40,7 @@ Non-blocking STM32 radar system with CAN bus telemetry, Processing GUI, and mult
 
 To avoid hardware conflicts with the **ST-Link/V2 SWD debugger (Port A)**, UI peripherals and non-critical I/Os are assigned to **Port B**, reserving core high-speed peripherals (CAN CS, Servo PWM, Buzzer, UART) for Port A.
 
+```text
 +-------------------------------------------------------------------------+
 |                         STM32F103C8T6 (Blue Pill)                       |
 +-------------------+-------------------+-------------------+-------------+
@@ -59,3 +60,4 @@ To avoid hardware conflicts with the **ST-Link/V2 SWD debugger (Port A)**, UI pe
                     [ Processing 4 Desktop Radar GUI ]
 
 ---
+

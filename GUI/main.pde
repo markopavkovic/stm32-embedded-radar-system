@@ -76,7 +76,7 @@ void drawObject() {
   pushMatrix();
   translate(width/2, height - height*0.074);
   strokeWeight(9);
-  stroke(255, 10, 10); // Crvena boja za prepreku
+  stroke(255, 10, 10); 
   float pixsDistance = iDistance * ((height - height*0.1666) * 0.025); 
   if (iDistance < 40 && iDistance > 0) {
     line(pixsDistance*cos(radians(iAngle)), -pixsDistance*sin(radians(iAngle)), 
